@@ -1,0 +1,544 @@
+/* -------- */
+/* Defaults */
+/* -------- */
+:root {
+    --background: #000;
+    --text: #fff;
+    --hover: #333;
+    --light-hover: #888;
+    --active: #400;
+    --hover-active: #800;
+    --xxl: calc(var(--size)*32);
+    --large: calc(var(--size)*16);
+    --medium: calc(var(--size)*8);
+    --small: calc(var(--size)*4);
+    --tiny: calc(var(--size)*2);
+    --size: 16px;
+    --nano: calc(var(--size)*0.5);
+
+    --time: 0.5s; /* Default time for transitions */
+    --bg-blur: 8px; /* Background blur */
+}
+html {
+    color: var(--text);
+    background-color: var(--background);
+    font-family: OpenSans, Arial, Helvetica, sans-serif;
+    font-size: var(--size);
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 3em;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.5em;
+}
+button {
+    background-color: var(--background);
+    color: var(--text);
+    border: none;
+    padding: 0.5em 0.5em;
+    font-size: calc(var(--size)*0,83333333333333333333333333333331);
+}
+button:hover {
+    background-color: var(--hover);
+}
+button:hover:active {
+    background-color: var(--hover-active);
+}
+button:active, button.active {
+    background-color: var(--active);
+}
+main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-auto-columns: auto;
+    grid-auto-rows: auto;
+    scroll-snap-type: both mandatory;
+    overscroll-behavior: contain;
+    height: 100vh;
+    overflow: auto;
+    scroll-behavior: auto;
+}
+main > * {
+    scroll-snap-align: center;
+    scroll-snap-stop: normal;
+}
+main[data-noSnap] {
+    scroll-snap-type: none;
+}
+section {
+    overflow: hidden;
+}
+footer {
+    --bgimg: url(assets/BG3-s.png);
+}
+a {
+    color: var(--text);
+}
+a:hover {
+    opacity: 0.75;
+}
+a:hover:active {
+    opacity: 0.25;
+}
+a:active {
+    opacity: 0.5;
+}
+::-webkit-scrollbar {
+    width: var(--nano); /* Set the width of the scrollbar */
+    transform: translateY(5px);
+}
+::-webkit-scrollbar-button {
+    display: none;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 50px; /* Set the border-radius of the scrollbar thumb */
+    background-color: #fff4; /* Set the background color of the scrollbar thumb */
+    /* transition: 2s --colorval 2s ease-in-out; */
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #fff6;
+}
+::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+::-webkit-scrollbar-track {
+    border-radius: 50px; /* Set the border-radius of the scrollbar track */
+}
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+/* why can't this work :not(:focus) thing work or sm... :( */
+/* ::-moz-selection {
+    color: var(--text-selection-color);
+    background: var(--text-selection-background);
+    --text-selection-color: var(--light-hover);
+    --text-selection-background: var(--hover);
+}
+::selection {
+    color: var(--text-selection-color);
+    background: var(--text-selection-background);
+    --text-selection-color: var(--light-hover);
+    --text-selection-background: var(--hover);
+}
+:focus {
+    --text-selection-color: var(--hover-active);
+    --text-selection-background: var(--active);
+} */
+
+/* --------------- */
+/* Styling Classes */
+/* --------------- */
+.thicc {
+    font-size: 10vh;
+    font-weight: 900;
+}
+.largeFont {
+    font-size: var(--medium);
+}
+.icon-tabler {
+    width: var(--small);
+    height: var(--small);
+    --color: var(--text);
+}
+.iconEffect .icon-tabler {
+    transition: scale var(--time) ease-in-out, stroke var(--time) ease-in-out;
+    --icon-color: var(--text);
+    /* Note: If changed, please look at .twitter-x class and change there as well! */
+}
+.iconEffect .icon-tabler:hover {
+    scale: 1.1;
+    --icon-color: var(--custom-color, var(--text));
+}
+.boxShadow {
+    box-shadow: black 0px 0px var(--small);
+}
+
+/* ------------------ */
+/* Padding and Margin */
+/* ------------------ */
+.pad-all.pad-medium {
+    padding: var(--medium);
+    --cur-pad: var(--medium);
+    --cur-pad-left: var(--medium);
+    --cur-pad-top: var(--medium);
+    --cur-pad-right: var(--medium);
+    --cur-pad-bottom: var(--medium);
+}
+.pad-all.pad-small {
+    padding: var(--small);
+    --cur-pad: var(--small);
+    --cur-pad-left: var(--small);
+    --cur-pad-top: var(--small);
+    --cur-pad-right: var(--small);
+    --cur-pad-bottom: var(--small);
+}
+.pad-all.pad-tiny {
+    padding: var(--tiny);
+    --cur-pad: var(--tiny);
+    --cur-pad-left: var(--tiny);
+    --cur-pad-top: var(--tiny);
+    --cur-pad-right: var(--tiny);
+    --cur-pad-bottom: var(--tiny);
+}
+.pad-right.pad-small {
+    padding-right: var(--small);
+    --cur-pad: var(--small);
+    --cur-pad-right: var(--small);
+}
+.pad-right.pad-medium {
+    padding-right: var(--medium);
+    --cur-pad: var(--medium);
+    --cur-pad-right: var(--medium);
+}
+.pad-left.pad-small {
+    padding-left: var(--small);
+    --cur-pad: var(--small);
+    --cur-pad-left: var(--small);
+}
+.pad-left.pad-medium {
+    padding-left: var(--medium);
+    --cur-pad: var(--medium);
+    --cur-pad-left: var(--medium);
+}
+
+/* ---------------- */
+/* Image Formatting */
+/* ---------------- */
+.sectionHasBG {
+    position: relative;
+}
+.sectionHasBG::after {
+    /* to set a bg, define --bgimg somewhere */
+    content: ""; position: absolute;
+    inset: 0; width: 100%; height: 100%; z-index: -1;
+    background-image: var(--bgimg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    filter: blur(var(--bg-blur));
+}
+
+/* -------------- */
+/* Layout Classes */
+/* -------------- */
+.fullViewport {
+    width: 100vw;
+    height: 100vh;
+}
+.fullScreen {
+    width: 100%;
+    height: 100vh;
+}
+.fullPercent {
+    width: 100%;
+    height: 100%;
+}
+.fullPercentRespectPad {
+    width: calc(100% - var(--cur-pad-left) - var(--cur-pad-right));
+    height: calc(100% - var(--cur-pad-top) - var(--cur-pad-bottom));
+}
+
+/* ------------ */
+/* Flex Classes */
+/* ------------ */
+.flex {
+    display: flex;
+}
+.flex.column {
+    flex-direction: column;
+}
+.flex.row {
+    flex-direction: row;
+}
+.flex.centerFull {
+    justify-content: center;
+    align-items: center;
+}
+.flex.centerH {
+    align-items: center;
+}
+.flex.centerV {
+    justify-content: center;
+}
+.flex.wrap {
+    flex-wrap: wrap;
+}
+.gap-medium {
+    gap: var(--medium);
+    --gap: var(--medium);
+}
+.gap-nano {
+    gap: var(--nano);
+    --gap: var(--nano);
+}
+.icon-links-parent > a {
+    display: flex;
+    align-items: center;
+    column-gap: var(--nano);
+}
+
+/* ---------------- */
+/* Project Overview */
+/* ---------------- */
+#projects > div > div {
+    --radius: 2em;
+    border-radius: 2em;
+    backdrop-filter: grayscale(0.4) brightness(0.6) blur(calc(var(--bg-blur)*2));
+}
+#project-selection {
+    min-width: var(--large);
+    height: calc(100% - var(--radius)*2);
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+    overflow-y: scroll;
+    /* use to seperate the two sections. may destroy design flow */
+    /* background: linear-gradient(90deg, transparent 95%, #0002); */
+    margin: var(--radius) 0;
+}
+/* #project-selection > *:first-child {
+    margin-top: var(--radius);
+} */
+#project-selection button {
+    background-color: transparent;
+    background: linear-gradient(90deg, var(--current-col) 0%, transparent 100%);
+}
+#project-selection button:hover {
+    --current-col: var(--hover);
+}
+#project-selection button:hover:active {
+    --current-col: var(--hover-active);
+}
+#project-selection button:active, #project-selection button.active {
+    --current-col: var(--active);
+}
+#project-selection h3 {
+    text-align: center;
+    text-decoration: underline;
+    margin: 0.3em 0;
+}
+#project-overview {
+    flex-grow: 1;
+    /* border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius); */
+}
+#project-overview .screenshots {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-columns: 1fr;
+    column-gap: var(--nano);
+    height: 50%;
+}
+
+#project-overview .image {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+}
+
+#project-overview .screenshots > :first-child {
+    grid-column: span 1; /* Make the first image span two columns */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+#project-overview .screenshots > :last-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create a 2x2 grid for the last child */
+    grid-auto-rows: 1fr;
+    row-gap: var(--nano);
+    column-gap: var(--nano);
+    overflow: auto; /* Add scrollbar if content exceeds container */
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+/* Depending on amount of images, show extra gallery or not. */
+#project-overview .screenshots[data-amount="2"] > :last-child {
+    grid-template-columns: repeat(1, 1fr);
+}
+#project-overview .screenshots[data-amount="1"] > :last-child, #project-overview .screenshots[data-amount="0"] > :last-child {
+    display: none;
+}
+#project-overview .screenshots[data-amount="1"], #project-overview .screenshots[data-amount="0"] {
+    grid-template-columns: repeat(1, 1fr);
+}
+#project-overview .screenshots[data-amount="1"] .image, #project-overview .screenshots[data-amount="0"] .image {
+    max-width: 50%;
+}
+/* Other stuff */
+#project-overview .description {
+    overflow: auto;
+    width: 100%;
+}
+#project-overview .desc-flex {
+    display: flex;
+    column-gap: var(--nano);
+}
+#project-overview h1 {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    flex-grow: 1;
+}
+
+/* ------ */
+/* Footer */
+/* ------ */
+footer {
+    scroll-snap-align: end;
+}
+#primaryFooter {
+    /* height: 60vh; */
+    padding: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+#extraFooter {
+    transition: height 0.5s ease-in-out;
+    height: 0;
+    overflow: hidden;
+}
+#extraFooter[data-open="true"] {
+    height: 100vh;
+    position: relative;
+    overflow: auto;
+}
+
+/* -------------------- */
+/* Anti-Printer hehehhe */
+/* -------------------- */
+@media print {
+    * {
+        display: none !important;
+    }
+    :root {
+        --background: #fff;
+        --text: #000;
+    }
+    html, head, body {
+        display: unset !important;
+    }
+    #MessageToPeopleWhoPrintWebpages, #MessageToPeopleWhoPrintWebpages * {
+        display: flex !important;
+        background-color: var(--background);
+        color: var(--text);
+    }
+}
+
+/* ----------------- */
+/* Debugging Classes */
+/* ----------------- */
+.debug.box {
+    width: 100px;
+    height: 100px;
+}
+.debug.red {
+    background-color: red;
+}
+.debug.yellow {
+    background-color: yellow;
+}
+.debug.green {
+    background-color: green;
+}
+.debug.blue {
+    background-color: blue;
+}
+
+/* ---------------------- */
+/* ELEMENT SPECIFIC STUFF */
+/* ---------------------- */
+
+#introduction {
+    --bgimg: url(assets/BG1-s.png);
+}
+#projects {
+    --bgimg: url(assets/BG2-s.png);
+}
+.twitter-x > :first-child {
+    display: block;
+}
+.twitter-x > :last-child {
+    display: none;
+}
+.twitter-x:hover > :first-child {
+    display: none;
+}
+.twitter-x:hover > :last-child {
+    display: block;
+}
+/* fix twitter effect stuff */
+.iconEffect .twitter-x .icon-tabler {
+    transition: none;
+    scale: initial !important;
+}
+.iconEffect .twitter-x {
+    transition: scale var(--time) ease-in-out;;
+}
+.iconEffect .twitter-x:hover {
+    scale: 1.1;
+}
+
+/* -------------------- */
+/* MOBILE OPTIMIZATIONS */
+/*   We "love" mobile   */
+/* -------------------- */
+@media (orientation: portrait) {
+    .dyn-row.flex.row {
+        flex-direction: column;
+    }
+    .dyn-gap {
+        gap: calc(var(--gap)*0.25);
+    }
+    .dyn-nogap {
+        gap: 0;
+    }
+    #project-selection {
+        height: var(--large);
+        min-height: var(--small);
+        width: 100%;
+    }
+    #project-overview .thicc {
+        font-size: 10vw;
+        overflow: scroll;
+    }
+    #introduction > div > div > :nth-child(2) {
+        text-align: center;
+    }
+    #introduction > div > div > * .iconEffect {
+        justify-content: center;
+    }
+}
+/* @media ((max-width: 1024px) and (min-width: 768px)) or ((max-width: 133.33vh) and (orientation: landscape)) {
+    :root {
+        --size: calc(100vw*0.015625);
+    }
+} */
+/* @media (max-width: 768px) or (max-height: 768px) {
+    :root {
+        --size: calc(min(100vw, 100vh)*0.02083333333333333333333333333333); 1/48
+    }
+} */
+@media ((max-width: 1024px) or (max-height: 1024px)) and ((min-width: 512px) or (min-height: 512px)) {
+    :root {
+        --size: calc(min(100vw, 100vh)*0.01785714285714285714285714285714); /* 1/56 */
+    }
+}
+@media ((max-width: 512px) and (min-width: 200vh)) or ((max-height: 512px) and (min-height: 200vw)) or ((max-width: 512px) and (max-height: 512px)) {
+    :root {
+        --size: calc(min(100vw, 100vh)*0.015625); /* 1/64 */
+    }
+}

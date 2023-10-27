@@ -1,5 +1,175 @@
-<html>
-  <body>
-    <h1>Please wait while I create this website. Visit my Profile to see my repositories. <a href="https://github.com/Lopolin-LP/">Click here</a></h1>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Lopolin" />
+    <meta name="description" content="Hompage of content creator and programmer &quot;Lopolin&quot;. Creator of things like BetterDiscordFont and base64-clipboard-encode." />
+    <meta name="keywords" content="Lopolin, lopolin, Lxpxlin, lxpxlin" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#000000" />
+    <!-- Non-standard Metadata -->
+    <meta name="robots" content="index, follow" />
+    <!-- Other -->
+    <title>Lopolin - Homepage</title>
+    <link rel="apple-touch-icon" sizes="512x512" href="assets/pic512.png" type="image/png" />
+    <link rel="apple-touch-icon" sizes="256x256" href="assets/pic256.png" type="image/png" />
+    <link rel="apple-touch-icon" sizes="128x128" href="assets/pic128.png" type="image/png" />
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./font.css" />
+    <script src="./app.js"></script>
+    <!-- Image Viewer -->
+    <link  href="viewer/viewer.min.css" rel="stylesheet">
+    <script src="viewer/viewer.min.js"></script>
+</head>
+<body>
+    <main>
+        <header></header>
+        <section id="introduction" class="flex fullScreen centerFull sectionHasBG">
+            <div class="pad-all pad-medium fullPercentRespectPad flex column centerFull">
+                <div class="flex row gap-medium dyn-row dyn-nogap">
+                    <div class="flex centerFull">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="height: var(--large); width: var(--large);">
+                            <!-- First image -->
+                            <mask id="clip-circle-1">
+                                <circle cx="50" cy="50" r="50" fill="#fff"/>
+                                <circle cx="85" cy="85" r="17.5" fill="#000"/>
+                            </mask>
+                            <image id="intro-primary-image" href="./assets/pic1024.png" x="0" y="0" width="100" height="100" mask="url(#clip-circle-1)" />
+
+                            <!-- Second image -->
+                            <clipPath id="clip-circle-2">
+                              <circle cx="85" cy="85" r="15"/>
+                            </clipPath>
+                            <a href="#" onclick="lxpxlin('toggle')">
+                                <image id="intro-secondary-image" href="./assets/picrblx.png" x="70" y="70" width="30" height="30" clip-path="url(#clip-circle-2)" />
+                            </a>
+                        </svg>
+                    </div>
+                    <div id="introduction-description">
+                        <h1>G'day, I'm Lopolin.</h1>
+                        <p>I am a content creator and hobby programmer. I have not achieved much, but I haven't achieved nothing.</p>
+                        <p>Despite using a Minecraft Profile Picture I haven't played Minecraft in ages.</p>
+                        <div class="flex row wrap iconEffect">
+                            <a href="https://www.youtube.com/@Lopolin_LP" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="--custom-color: #f00;" class="icon icon-tabler icon-tabler-brand-youtube" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--icon-color)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" />
+                                    <path d="M10 9l5 3l-5 3z" />
+                                </svg>
+                            </a>
+                            <a class="twitter-x" href="https://twitter.com/LopolinOfficial" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="--custom-color: #333;" class="icon icon-tabler icon-tabler-brand-x" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--icon-color)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                                    <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" style="--custom-color: #1da1f2;" class="icon icon-tabler icon-tabler-brand-twitter" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--icon-color)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.tiktok.com/@lopolin_lp" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="--custom-color: #807b9f;" class="icon icon-tabler icon-tabler-brand-tiktok" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--icon-color)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.reddit.com/user/Lopolin" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="--custom-color: #ed4102;" class="icon icon-tabler icon-tabler-brand-reddit" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--icon-color)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 8c2.648 0 5.028 .826 6.675 2.14a2.5 2.5 0 0 1 2.326 4.36c0 3.59 -4.03 6.5 -9 6.5c-4.875 0 -8.845 -2.8 -9 -6.294l-1 -.206a2.5 2.5 0 0 1 2.326 -4.36c1.646 -1.313 4.026 -2.14 6.674 -2.14z" />
+                                    <path d="M12 8l1 -5l6 1" />
+                                    <path d="M19 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                                    <circle cx="9" cy="13" r=".5" fill="currentColor" />
+                                    <circle cx="15" cy="13" r=".5" fill="currentColor" />
+                                    <path d="M10 17c.667 .333 1.333 .5 2 .5s1.333 -.167 2 -.5" />
+                                </svg>
+                            </a>
+                            <a href="https://github.com/Lopolin-LP" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="--custom-color: #fff;" class="icon icon-tabler icon-tabler-brand-github" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--icon-color)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/lopolin_lp" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="--custom-color: #cb38a5;" class="icon icon-tabler icon-tabler-brand-instagram" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--icon-color)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                    <path d="M16.5 7.5l0 .01" />
+                                </svg>
+                            </a>
+                            <a href="https://open.spotify.com/user/rwpcfql66cqmgnr7v4qacfcxt" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="--custom-color: #1ed760;" class="icon icon-tabler icon-tabler-brand-spotify" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--icon-color)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                    <path d="M8 11.973c2.5 -1.473 5.5 -.973 7.5 .527" />
+                                    <path d="M9 15c1.5 -1 4 -1 5 .5" />
+                                    <path d="M7 9c2 -1 6 -2 10 .5" />
+                                </svg>
+                            </a>
+                            <a href="https://www.twitch.tv/lopolin_lp" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="--custom-color: #9146ff;" class="icon icon-tabler icon-tabler-brand-twitch" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--icon-color)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M4 5v11a1 1 0 0 0 1 1h2v4l4 -4h5.584c.266 0 .52 -.105 .707 -.293l2.415 -2.414c.187 -.188 .293 -.442 .293 -.708v-8.585a1 1 0 0 0 -1 -1h-14a1 1 0 0 0 -1 1z" />
+                                    <path d="M16 8l0 4" />
+                                    <path d="M12 8l0 4" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="fullScreen sectionHasBG">
+            <div class="pad-all pad-small fullPercentRespectPad">
+                <div class="flex row dyn-row centerFull fullPercent">
+                    <div id="project-selection" class="flex column">
+                        <h3>Tools</h3>
+                        <button id="project-base64clipboard" data--="base64clipboard">Base64 Clipboard Encode</button>
+                        <button id="project-dc-indent" data--="dc-indent">Discord Indent Fix</button>
+                        <h3>Vencord</h3>
+                        <button id="project-dc-bdf" data--="dc-bdf">BetterDiscordFont</button>
+                        <button id="project-dc-mtc" data--="dc-mtc">MoreTagColors</button>
+                    </div>
+                    <div id="project-overview" class="fullPercentRespectPad pad-all pad-tiny flex centerV">
+                        <noscript class="thicc">Please enable JavaScript to use this interface.</noscript>
+                        <script>document.getElementById("project-overview").innerHTML += `<div class="thicc flex fullPercent centerFull" style="text-align: center; opacity: 0.5;">Select a project from the left to view it</div>`</script>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="sectionHasBG">
+            <div id="primaryFooter">
+                <a href="#" onclick="viewCredits();">Credits</a>
+                <a href="#" onclick="viewCopyright();">2023 &copy; Lopolin</a>
+                <div class="icon-links-parent">
+                    <a href="https://github.com/Lopolin-LP/lopolin-lp.github.io" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" style="width: var(--tiny); height: var(--tiny);" class="icon icon-tabler icon-tabler-brand-github" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--text)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                    </svg> GitHub</a>
+                </div>
+            </div>
+            <div id="extraFooter" class="flex column centerFull"></div>
+            <div id="deepFooter" style="height: 0; width: 0;"></div>
+        </footer>
+    </main>
+    <div id="MessageToPeopleWhoPrintWebpages" style="display: none;" class="fullViewport flex centerFull thicc">
+        <div>don't print.</div>
+        <!--
+            Ideas for another day...
+            - give ability to print website, but make a big watermark to annoy the living fk out of you :3
+            - Add transition opacity for twitter-x. do something with absolute and relative positioning
+
+            Ideas for next release...
+            - "Light" Mode
+        -->
+    </div>
+    <script>
+        window.onload = main();
+    </script>
+</body>
 </html>

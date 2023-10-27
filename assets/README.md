@@ -1,0 +1,1 @@
+All Files within this Folder are created by Lopolin (me). The Games they were created in (Minecraft and Roblox) are not owned by Lopolin. The Assets used to create them are also not owned by me, however the combination of the assets are my Online Branding Identity. *That* falls under the included LICENCE. You may not steal or impersonate it.
