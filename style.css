@@ -496,7 +496,16 @@ footer {
 /* MOBILE OPTIMIZATIONS */
 /*   We "love" mobile   */
 /* -------------------- */
+.visibleOnMobile {
+    display: none;
+}
 @media (orientation: portrait) {
+    .visibleOnMobile {
+        display: unset;
+    }
+    .visibleOnDesktop {
+        display: none;
+    }
     .dyn-row.flex.row {
         flex-direction: column;
     }
