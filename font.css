@@ -24,7 +24,7 @@
 }
 @font-face {
     font-family: OpenSans;
-    src: url(./font/OpenSans-Regular.ttf);
+    src: url(./font/OpenSans-ExtraBold.ttf);
     font-weight: 700;
     font-style: normal;
 }
@@ -36,7 +36,7 @@
 }
 @font-face {
     font-family: OpenSans;
-    src: url(./font/OpenSans-RegularItalic.ttf);
+    src: url(./font/OpenSans-Italic.ttf);
     font-weight: 400;
     font-style: italic;
 }
@@ -54,7 +54,7 @@
 }
 @font-face {
     font-family: OpenSans;
-    src: url(./font/OpenSans-RegularItalic.ttf);
+    src: url(./font/OpenSans-ExtraBoldItalic.ttf);
     font-weight: 700;
     font-style: italic;
 }
