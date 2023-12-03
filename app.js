@@ -118,7 +118,7 @@ let projects = {
         title: "BetterDiscordFont",
         description: "I hate Discords new font + BetterBackground Theme didn't accept the old font Theme + Window's Native Emojis appeared even though I replaced them with Noto Color Emoji. Being fed up with these things I decided to create this theme as a 3 in 1.",
         link: null,
-        source: "https://github.com/Lopolin-LP/better-discord-font"
+        source: "https://github.com/Lopolin-LP/custom-discord-themes/tree/main/better-discord-font"
     },
     "base64clipboard": {
         pics: ["./overviews/base64clipboard/primary.jpg", "./overviews/base64clipboard/conversion.jpg", "./overviews/base64clipboard/help.jpg"],
@@ -132,7 +132,14 @@ let projects = {
         title: "MoreTagColors (for Vencord)",
         description: "On my mobile phone I use modded Discord as well (Vendetta). One Plugin adds More Tags to certain people, such as owners, admins, staff, etc. and colors them. Vencord does that as well, but they aren't colored, so I made this theme to color them. Fully customizable. Main CSS and customization is within the same file.",
         link: null,
-        source: "https://github.com/Lopolin-LP/more-tag-colors-vencord"
+        source: "https://github.com/Lopolin-LP/custom-discord-themes/tree/main/more-tag-colors-vencord"
+    },
+    "dc-cci": {
+        pics: ["./overviews/dc-cci/primary.png"],
+        title: "Condensed Chat Icons",
+        description: "So many plugins put their silly little icon in this already dense spot. On a 4:3 monitor that is straight up hell! It literally feels like typing on a mobile phone, every 5 words it wraps to the next line. This Theme fixes that by wrapping the icons. The Chat Field may be taller now, but who cares, at least you can type normally.",
+        link: null,
+        source: "https://github.com/Lopolin-LP/custom-discord-themes/tree/main/condensed-chat-icons"
     }
 }
 
