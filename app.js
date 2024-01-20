@@ -35,6 +35,10 @@ function projectSelect(elm) {
         let img = document.createElement("img");
         img.src = data.pics[i];
         img.className = "image";
+        try {
+            img.alt = data.pics_ext[i].replace(/(\r\n|\r|\n)/g, " | ");
+            img.title = data.pics_ext[i];
+        } catch (err) {}
         pics.push(img);
     }
     let noPics = false;
@@ -140,6 +144,14 @@ let projects = {
         description: "So many plugins put their silly little icon in this already dense spot. On a 4:3 monitor that is straight up hell! It literally feels like typing on a mobile phone, every 5 words it wraps to the next line. This Theme fixes that by wrapping the icons. The Chat Field may be taller now, but who cares, at least you can type normally.",
         link: null,
         source: "https://github.com/Lopolin-LP/custom-discord-themes/tree/main/condensed-chat-icons"
+    },
+    "com-fan-art": {
+        pics: ["./fan-art/moons_art_work_of_me.png"],
+        pics_ext: ["M⚝o n | Discord: koi.x3\nCC BY-NC-ND 4.0"],
+        title: "Fan Art (for me)",
+        description: "Fan Art created by my wonderful, non-existant community! Hover over or click on any image to see it's title, creator and their socials.",
+        link: null,
+        source: null
     }
 }
 
