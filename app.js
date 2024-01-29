@@ -161,7 +161,7 @@ function viewCredits() {
     <div class="fullPercent flex column centerFull">
         <h2>Website</h2>
         <p class="flex column icon-links-parent">
-            <a href="https://tablericons.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tabler" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--text)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <a href="https://tabler.io/icons" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tabler" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--text)" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M8 9l3 3l-3 3" />
                     <path d="M13 15l3 0" />

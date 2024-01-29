@@ -148,12 +148,19 @@ a:active {
     height: var(--small);
     --color: var(--text);
 }
+.iconEffect a {
+    transition: color var(--time) ease-in-out;
+}
 .iconEffect .icon-tabler {
     transition: scale var(--time) ease-in-out, stroke var(--time) ease-in-out;
     --icon-color: var(--text);
     /* Note: If changed, please look at .twitter-x class and change there as well! */
 }
-.iconEffect .icon-tabler:hover {
+.iconEffect a:hover {
+    color: var(--custom-color, var(--text));
+    opacity: 1;
+}
+.iconEffect a:hover .icon-tabler {
     scale: 1.1;
     --icon-color: var(--custom-color, var(--text));
 }
