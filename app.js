@@ -152,7 +152,14 @@ let projects = {
         description: "Fan Art created by my wonderful, non-existant community! Hover over or click on any image to see it's title, creator and their socials.",
         link: null,
         source: null
-    }
+    },
+    "dc-ucroh": {
+        pics: ["https://raw.githubusercontent.com/Lopolin-LP/custom-discord-themes/main/username-chat-readability-on-hover/showcase.png"],
+        title: "Username Chat Readability On Hover",
+        description: "Black Theme, Black Username. Good luck reading it in chat. Now you can when you hover over it.\nI made this plugin only because my friend complained about it once when he was trying to view the name of the person in this example.",
+        link: null,
+        source: "https://github.com/Lopolin-LP/custom-discord-themes/tree/main/username-chat-readability-on-hover"
+    },
 }
 
 function viewCredits() {
