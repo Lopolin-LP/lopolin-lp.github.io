@@ -43,7 +43,7 @@ button {
     color: var(--text);
     border: none;
     padding: 0.5em 0.5em;
-    font-size: calc(var(--size)*0,83333333333333333333333333333331);
+    font-size: calc(var(--size)*0.83333333333333333333333333333331);
 }
 button:hover {
     background-color: var(--hover);
@@ -90,6 +90,9 @@ a:hover:active {
 }
 a:active {
     opacity: 0.5;
+}
+img {
+    border-radius: calc(var(--radius)*0.5);
 }
 ::-webkit-scrollbar {
     width: var(--nano); /* Set the width of the scrollbar */
@@ -166,6 +169,22 @@ a:active {
 }
 .boxShadow {
     box-shadow: black 0px 0px var(--small);
+}
+/* iconEffect for Images */
+.iconEffect a svg image {
+    transition: opacity var(--time) ease-in-out;
+}
+.iconEffect a svg .noHover {
+    opacity: 1;
+}
+.iconEffect a svg .yesHover {
+    opacity: 0;
+}
+.iconEffect a:hover svg .noHover {
+    opacity: 0;
+}
+.iconEffect a:hover svg .yesHover {
+    opacity: 1;
 }
 
 /* ------------------ */
