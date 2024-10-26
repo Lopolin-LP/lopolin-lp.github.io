@@ -68,7 +68,7 @@ main {
 }
 main > * {
     scroll-snap-align: center;
-    scroll-snap-stop: normal;
+    scroll-snap-stop: always;
 }
 main[data-noSnap] {
     scroll-snap-type: none;
