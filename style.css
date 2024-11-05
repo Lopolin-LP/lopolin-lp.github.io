@@ -14,6 +14,7 @@
     --small: calc(var(--size)*4);
     --tiny: calc(var(--size)*2);
     --size: 16px;
+    --size-multiplier: 1;
     --nano: calc(var(--size)*0.5);
 
     --time: 0.5s; /* Default time for transitions */
@@ -484,7 +485,7 @@ footer {
     background-color: yellow;
 }
 .debug.green {
-    background-color: green;
+    background-color: lime;
 }
 .debug.blue {
     background-color: blue;
@@ -541,6 +542,9 @@ footer {
     .dyn-row.flex.row {
         flex-direction: column;
     }
+    .dyn-row-reverse.flex.row {
+        flex-direction: column-reverse;
+    }
     .dyn-gap {
         gap: calc(var(--gap)*0.25);
     }
@@ -573,13 +577,23 @@ footer {
         --size: calc(min(100dvw, 100dvh)*0.02083333333333333333333333333333); 1/48
     }
 } */
-@media ((max-width: 1024px) or (max-height: 1024px)) and ((min-width: 512px) or (min-height: 512px)) {
+/* @media ((max-width: 1024px) or (max-height: 1024px)) and ((min-width: 512px) or (min-height: 512px)) {
     :root {
-        --size: calc(min(100dvw, 100dvh)*0.01785714285714285714285714285714); /* 1/56 */
+        --size: calc(min(100dvw, 100dvh)*(1/56));
     }
 }
 @media ((max-width: 512px) and (min-width: 200dvh)) or ((max-height: 512px) and (min-height: 200dvw)) or ((max-width: 512px) and (max-height: 512px)) {
     :root {
-        --size: calc(min(100dvw, 100dvh)*0.015625); /* 1/64 */
+        --size: calc(min(100dvw, 100dvh)*(1/64));
     }
+    } */
+@media ((max-width: 768px) and (max-height: 1024px)) or ((max-width: 1024px) and (max-height: 768px)) { /* if width < 1024px and height < 768px OR width < 768px and height < 1024px... then */
+    :root {
+        --size: calc((1vh + 1vw) * var(--size-multiplier));
+    }    
+}
+@media (orientation: landscape) {
+    :root {
+        --size-multiplier: 0.75;
+    }    
 }
