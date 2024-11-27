@@ -174,6 +174,13 @@ let projects = {
         link: null,
         source: "https://github.com/Lopolin-LP/custom-discord-themes/tree/main/full-text"
     },
+    "jgalv": {
+        pics: ["./overviews/jgalv/primary.png", "./overviews/jgalv/2.png", "./overviews/jgalv/3.png"],
+        title: "Justified Gallery Viewer / Album Viewer",
+        description: "View local images in a nice gallery view, as if it were Google Photos. I love looking at my gf's pics, but some of them are only locally saved, and I couldn't find a good image viewer for PC, so I made one myself. On Android I recommend Avez' Mosaic View.",
+        link: "https://lopolin-lp.github.io/justified-gallery-viewer/",
+        source: "https://github.com/Lopolin-LP/justified-gallery-viewer"
+    },
 }
 
 function viewCredits() {
