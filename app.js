@@ -1,3 +1,4 @@
+var projectNoSelectionHTML = `<div class="thicc flex fullPercent centerFull" id="pleaseSelectProject" style="text-align: center; opacity: 0.5;"><div>Select a project from the <span class="visibleOnDesktop">left</span><span class="visibleOnMobile">top</span> to view it</div></div>`;
 function main() {
     document.getElementById("project-selection").onclick = projectSelect;
 }
@@ -109,6 +110,10 @@ function projectSelect(elm) {
         });
     }
 }
+function projectClose() {
+    document.getElementById("project-overview").innerHTML = projectNoSelectionHTML;
+    lastSelected.classList.remove("active");
+}
 let projects = {
     "dc-indent": {
         pics: ["./overviews/dc-indent/primary.jpg", "./overviews/dc-indent/1.png", "./overviews/dc-indent/why.png"],
@@ -180,6 +185,20 @@ let projects = {
         description: "View local images in a nice gallery view, as if it were Google Photos. I love looking at my gf's pics, but some of them are only locally saved, and I couldn't find a good image viewer for PC, so I made one myself. On Android I recommend Avez' Mosaic View.",
         link: "https://lopolin-lp.github.io/justified-gallery-viewer/",
         source: "https://github.com/Lopolin-LP/justified-gallery-viewer"
+    },
+    "unisearch": {
+        pics: ["./overviews/unisearch/primary.png"],
+        title: "UniSearch",
+        description: "Your favourite search engine + DuckDuckGo Bangs. I recently learned of <a href='https://unduck.link'>unduck.link</a> and was really happy. Except I also wanted to see if I could move away from DuckDuckGo, so this combines both worlds :3",
+        link: "https://lopolin-lp.github.io/Gambling/",
+        source: "https://github.com/Lopolin-LP/Gambling"
+    },
+    "gambling": {
+        pics: ["./overviews/gambling/primary.png"],
+        title: "Gambling",
+        description: "The worst gambling slot machine simulator that exists, for the web. I initially started making this because I wanted my friends to actually go through with their joke and gamble, but also not make them lose any money (because Gambling is inherintly evil). Unfortunately after my motivation died, this did as well. But man I am proud of that animation stuff.",
+        link: "https://lopolin-lp.github.io/Gambling/",
+        source: "https://github.com/Lopolin-LP/Gambling"
     },
 }
 

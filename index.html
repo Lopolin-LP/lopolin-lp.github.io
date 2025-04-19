@@ -183,17 +183,19 @@
         </section>
         <section id="projects" class="fullScreen sectionHasBG">
             <div class="pad-all pad-small fullPercentRespectPad">
-                <div class="flex row dyn-row-reverse centerFull fullPercent">
+                <div class="flex row centerFull fullPercent" id="projects-container">
                     <div id="project-selection" class="flex column">
                         <h3>Tools</h3>
                         <button id="project-base64clipboard" data--="base64clipboard">Base64 Clipboard Encode</button>
                         <button id="project-dc-indent" data--="dc-indent">Discord Indent Fix</button>
+                        <button id="project-gambling" data--="gambling">Gambling</button>
                         <button id="project-jgalv" data--="jgalv">Justified Gallery Viewer</button>
+                        <button id="project-unisearch" data--="unisearch">UniSearch</button>
                         <h3>Vencord</h3>
                         <button id="project-dc-bdf" data--="dc-bdf">BetterDiscordFont</button>
                         <button id="project-dc-cci" data--="dc-cci">Condensed Chat Icons</button>
-                        <button id="project-dc-ucroh" data--="dc-dnddd">DnD Disable DC</button>
-                        <button id="project-dc-ucroh" data--="dc-fulltxt">Full Text</button>
+                        <button id="project-dc-dnddd" data--="dc-dnddd">DnD Disable DC</button>
+                        <button id="project-dc-fulltxt" data--="dc-fulltxt">Full Text</button>
                         <button id="project-dc-mtc" data--="dc-mtc">MoreTagColors</button>
                         <button id="project-dc-ucroh" data--="dc-ucroh">Username Chat Readability On Hover</button>
                         <div class="project-flex-seperator"></div>
@@ -202,15 +204,16 @@
                     </div>
                     <div id="project-overview" class="fullPercentRespectPad pad-all pad-tiny flex centerV">
                         <noscript class="thicc">Please enable JavaScript to use this interface.</noscript>
-                        <script>document.getElementById("project-overview").innerHTML += `<div class="thicc flex fullPercent centerFull" style="text-align: center; opacity: 0.5;"><div>Select a project from the <span class="visibleOnDesktop">left</span><span class="visibleOnMobile">top</span> to view it</div></div>`</script>
+                        <script>document.getElementById("project-overview").innerHTML += projectNoSelectionHTML</script>
                     </div>
+                    <button id="close-project" onclick="projectClose();">&LeftArrow;</button>
                 </div>
             </div>
         </section>
         <footer class="sectionHasBG">
             <div id="primaryFooter">
                 <a href="#" onclick="viewCredits();">Credits</a>
-                <a href="#" onclick="viewCopyright();">2023 - 2024 &copy; Lopolin</a>
+                <a href="#" onclick="viewCopyright();">2023 - 2025 &copy; Lopolin</a>
                 <div class="icon-links-parent">
                     <a href="https://github.com/Lopolin-LP/lopolin-lp.github.io" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" style="width: var(--tiny); height: var(--tiny);" class="icon icon-tabler icon-tabler-brand-github" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--text)" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -231,7 +234,6 @@
 
             Ideas for next release...
             - "Light" Mode
-            - Fix Mobile viewport
             - add language switcher from npoc
         -->
     </div>

@@ -40,7 +40,9 @@ h3 {
     font-size: 1.5em;
 }
 button {
-    background-color: var(--background);
+    background-color: rgb(from var(--background) r g b / 0.5);
+    backdrop-filter: blur(var(--bg-blur));
+    border-radius: var(--radius);
     color: var(--text);
     border: none;
     padding: 0.5em 0.5em;
@@ -424,6 +426,21 @@ img {
     margin-block-end: 0.5em;
     flex-grow: 1;
 }
+#close-project {
+    position: absolute;
+    top: var(--size);
+    left: var(--size);
+    font-size: var(--tiny);
+    background-color: transparent;
+    color: var(--text);
+    display: none;
+}
+#close-project:hover {
+    color: rgb(from var(--text) r g b / 0.75);
+}
+#close-project:hover:active {
+    color: rgb(from var(--text) r g b / 0.3);
+}
 
 /* ------ */
 /* Footer */
@@ -551,15 +568,21 @@ footer {
     .dyn-nogap {
         gap: 0;
     }
-    #project-selection {
-        height: var(--large);
-        min-height: var(--small);
-        width: 100%;
+    /* Project Management */
+    #projects-container:not(:has(#pleaseSelectProject)) #project-selection {
+        display: none;
+    }
+    #projects-container:not(:has(#pleaseSelectProject)) #close-project {
+        display: block;
+    }
+    #project-overview:has(#pleaseSelectProject) {
+        display: none;
     }
     #project-overview .thicc {
         font-size: 10dvw;
         overflow: scroll;
     }
+    /* Introduction */
     #introduction > div > div > :nth-child(2) {
         text-align: center;
     }
